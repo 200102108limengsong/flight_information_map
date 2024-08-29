@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Resume - Start Bootstrap Theme</title>
+        <link rel="icon" type="image/x-icon" href="/src/assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="/src/assets/resume/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- 主页-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">Clarence Taylor</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="/src/assets/profile.jpg" alt="..." /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">简介</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">项目经验</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">实习经历</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">教育背景</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">职业技能</a></li>
+                    
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">获奖证书</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- 简介-->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">
+                        王
+                        <span class="text-primary">洋</span>
+                    </h1>
+                    <div class="subheading mb-5">
+                        北京市 海淀区 · 北京林业大学(211) · 2025年7月毕业
+                        <br> 电话:18813036710 ·
+                        <a href="mailto:name@email.com">邮箱:Brucegis20@163.com</a>
+                    </div>
+                    <p class="lead mb-5">我的求职方向是<u style="color: rgb(172, 105, 11);">WebGIS开发工程师</u> 
+                        <br>熟悉WebGIS开发 · 框架VUE-3 & Django · GIS前端框架Cesium & Leaflet</p>
+                    
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- 项目经验-->
+            <section class="resume-section" id="interests">
+                <div class="resume-section-content">
+                    <h2 class="mb-3">独立开发项目：飞行情报地图</h2>
+                    <p>从零构建一款飞行情报视觉化应用（对标软件：飞常准与flightradar24）</p>
+                    <p class="mb-3">功能：实现了获取到发布欧洲地区真实且实时的空域、飞行器、障碍物、气象数据的可视化。</p>
+                    <p class="mb-3"><h6>解决难题：1.克服大量点集数据（欧洲机场数据集）在轻量化框架Leaflet中实时加载与渲染；2.飞机数据大量且实时更新，设计其在数据库存储与读取的方式；3.完整的飞行情报地图需求分析，功能设计，系统开发，部署备案流程。</h6></p>
+                    <p class="mb-3">技术栈：前端Vite构建Vue3框架，地图视图分别支持二维Leaflet与三维Cesium，用户界面采用Element-plus组件进行搭建，实现了界面模块化布局。后端采用Django+Geodjango框架，同时挂载自动化脚本，实现获取更新数据到PostGIS数据库；Gi进行代码的管理，使用docker将项目打包部署，购买域名并完成ICP备案，将域名解析到主机。</p>
+                    <p class="mb-3"><h6>最终效果：基础功能可以实现，延迟控制在150ms内，部分细节功能已完成原型设计但因时间原因未完成优化。</h6></p>
+                    <div class="social-icons">
+                        <a class="social-icon" href="https://github.com/200102108limengsong/Vue_Cesium"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+            </section>
+            <hr class="m-0" />
+            <!-- 实习经验-->
+            <section class="resume-section" id="experience">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">实习经历</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">时空数据算法实习生</h3>
+                            <div class="subheading mb-3">新华社——卫星新闻实验室</div>
+                            <p>在实习期间参与了“新能源汽车产量遥感监测项目”，为上级媒体、商业分析机构提供月度工厂实际产能信息预期。</p>
+                            <p>*手机信令数据：使用GeoPandas、Scipy进行数据清洗、趋势化分析与地理编码，将信令数据转化为地理信息数据。</p>
+                            <p>*地理信息爬取：使用selenium、requests、json等分析网页结构后，抓包获取json分析工厂位置POI的详细信息。</p>
+                            <p>*遥感影像处理:使用ENVI对高分二号影像进行辐射定标、大气矫正、波段融合等操作，提供更高分辨率清晰遥感影像。</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">2023年9月 - 2024年1月</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">地图算法实习生</h3>
+                            <div class="subheading mb-3">中国交通信息中心——国交空间（北京）</div>
+                            <p>在实习期间参与了“河南在役公路基础设施数字化项目”，为河南省公路管理局提供路网基础信息、健康程度、安全隐患排查与预警等相关功能数字化。</p>
+                            <p>*道路桩号算法：使用 Arcpy3.9 独立完成公路点位桩号与车载桩号识别、提取、计算，为实际定位提供基础。</p>
+                            <p>*急弯提取算法：采用道格拉斯-普克抽稀算法（对多点拟合曲线，计算曲线曲率）实现对公路转折点角度的计算。在此基础上参照国标道路设计标准，按设计时速自动配置阈值输出转折点为急弯的点位。</p>
+                            <p>*道路交叉口提取:使用GDAL基于OSM路网数据等多源信息,优化分级公路交叉口提取算法,验证精度大于84%。</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">2023年7月 - 2023年9月</span></div>
+                    </div>
+                    
+                    
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- 教育背景-->
+            <section class="resume-section" id="education">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">教育背景</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">北京林业大学</h3>
+                            <div class="subheading mb-3">地理信息科学</div>
+                            <div>学习方向：</div>
+                            <div>2022 - 2023 GIS 空间分析</div>
+                            <div>2023 - 2024 WebGIS开发</div><br>
+                            <p>均分:83.4</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">八月 2020 - 六月 2025</span></div>
+                    </div>
+                    
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- 工作技能-->
+            <section class="resume-section" id="skills">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">技能</h2>
+                    <div class="subheading mb-3">编程语言与工具</div>
+                    <ul class="list-inline dev-icons">
+                        
+                        <li class="list-inline-item">
+                            <i class="fab fa-js-square"></i> 
+                        </li>
+                         
+                        <li class="list-inline-item">
+                            <i class="fab fa-python"></i>
+                        </li>
+
+                        <li class="list-inline-item">
+                            <i class="fab fa-github"></i>
+                        </li>
+
+                        <li class="list-inline-item">
+                            <i class="fab fa-linux"></i>
+                        </li>
+                    </ul>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            熟练使用JavaScript
+                            <br>
+                            使用VUE,Cesium,Leaflet,Turf等框架进行GIS前端开发;
+                            <br>
+                            使用HTML5进行静态网页开发;
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            熟练使用Python
+                            <br>
+                            使用Django,Rest API进行GIS后端开发;
+                            <br>
+                            使用GDAL,Arcpy,Scipy,Matpltlib等库进行数据分析与可视化;
+                        </li>
+                        <li>
+                            熟悉Git,会基础操作,使用GitBash,Github进行代码管理与版本控制;
+                        </li>
+                        <li>
+                            熟悉Linux,会SSH基础命令,配置Nginx,Gunicorn将项目的部署在ubuntu;
+                        </li>
+                    </ul>
+                    <div class="subheading mb-3">GIS工具</div>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            熟练使用ArcGIS Pro、ENVI等软件进行数据操作、数据分析、模型建构、数据可视化;
+                        </li>
+                        <li>
+                            熟悉GeoServer、PostgreSQL、PostGIS等软件进行数据组织、数据管理与发布;
+                        </li>
+                        
+                    </ul>
+                </div>
+            </section>
+            <hr class="m-0" />
+            
+            <!-- 获奖证书-->
+            <section class="resume-section" id="awards">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">奖项与证书</h2>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            2022-2023 年北京林业大学 优秀学术奖
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            2022-2023 年北京林业大学 优秀学生干部奖
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            CET-6
+                        </li>
+                        
+                    </ul>
+                </div>
+            </section>
+            
+
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="/src/assets/resume/scripts.js"></script>
+    </body>
+</html>
