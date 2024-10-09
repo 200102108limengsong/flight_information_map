@@ -26,7 +26,7 @@ function InitMap() {
     }),
     terrainShadows: Cesium.ShadowMode.ENABLED//地图阴影
   })
-  viewer.scene.globe.enableLighting = true;//根据太阳表面光照
+  viewer.scene.globe.enableLighting = false;//根据太阳表面光照
 
   
   //添加OSM建筑物

@@ -52,7 +52,7 @@ onMounted(() => {
 
 // 数据获取函数
 async function fetchData() {
-  /*try {
+  try {
     const response = await fetch('http://localhost:8000/api/planesnow.geojson/?format=json');
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
@@ -67,7 +67,7 @@ async function fetchData() {
     flightData.value = data.map(feature => feature.properties);
   } catch (error) {
     console.error('Error fetching data:', error);
-  }*/
+  }
 
   
 

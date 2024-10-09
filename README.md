@@ -44,3 +44,5 @@ f_fimap用于存储项目前端文件
 
 2024-8.9-2024.8.12 对技术人员与飞行员等相关人员进行访问与调查，判断其对产品的兴趣与需求，准备进行下一步优化。
 
+技术框架
+![image](https://github.com/200102108limengsong/fwmapPNG/blob/master/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20241009140647.png)

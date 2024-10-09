@@ -697,37 +697,85 @@ function initMap() {
   // 监听地图移动事件，并控制机场加载
   map.on('move', handleMapMove);
   const aspUrl = 'http://127.0.0.1:8000/api/asps/?format=json';
-
+/*
   // 使用fetch获取数据
   fetch(aspUrl)
     .then(response => response.json())
     .then(data => {
       console.log('Data fetched and cached.');
 
+      // 定义一个样式映射对象
+      const typeToStyle = {
+        0: {color: '#808080', weight: 2, dashArray: '', fillOpacity: 0.1}, // 其他
+        1: {color: '#FF0000', weight: 2, dashArray: '', fillOpacity: 0.3}, // 受限
+        2: {color: '#FFA500', weight: 2, dashArray: '', fillOpacity: 0.5}, // 危险
+        3: {color: '#FF00FF', weight: 2, dashArray: '', fillOpacity: 0.3}, // 禁止
+        4: {color: '#008000', weight: 2, dashArray: '', fillOpacity: 0.1}, // 受控塔区域
+        5: {color: '#0000FF', weight: 2, dashArray: '', fillOpacity: 0.1}, // 应答器强制区
+        6: {color: '#00FFFF', weight: 2, dashArray: '', fillOpacity: 0.1}, // 无线电强制区
+        7: {color: '#800080', weight: 2, dashArray: '', fillOpacity: 0.1}, // 终端机动区
+        8: {color: '#FFC0CB', weight: 2, dashArray: '', fillOpacity: 0.1}, // 临时保留区
+        9: {color: '#404040', weight: 2, dashArray: '', fillOpacity: 0.1}, // 临时隔离区
+        10: {color: '#00008B', weight: 2, dashArray: '', fillOpacity: 0.1}, // 飞行信息区域
+        11: {color: '#ADD8E6', weight: 2, dashArray: '', fillOpacity: 0.1}, // 上层飞行信息区
+        12: {color: '#808000', weight: 2, dashArray: '', fillOpacity: 0.1}, // 防空识别区
+        13: {color: '#A52A2A', weight: 2, dashArray: '', fillOpacity: 0.1}, // 机场交通区
+        14: {color: '#006400', weight: 2, dashArray: '', fillOpacity: 0.1}, // 军用机场交通区
+        15: {color: '#AFEEEE', weight: 2, dashArray: '', fillOpacity: 0.1}, // 气道
+        16: {color: '#FF8C00', weight: 2, dashArray: '', fillOpacity: 0.3}, // 军事训练路线
+        17: {color: '#000080', weight: 2, dashArray: '', fillOpacity: 0.3}, // 警报区域
+        18: {color: '#00FF7F', weight: 2, dashArray: '', fillOpacity: 0.3}, // 警告区
+        19: {color: '#FFD700', weight: 2, dashArray: '', fillOpacity: 0.1}, // 保护区
+        20: {color: '#CD5C5C', weight: 2, dashArray: '', fillOpacity: 0.1}, // 直升机交通区
+        21: {color: '#FFDAB9', weight: 2, dashArray: '', fillOpacity: 0.1}, // 滑行区
+        22: {color: '#8B008B', weight: 2, dashArray: '', fillOpacity: 0.1}, // 应答器设置
+        23: {color: '#00CED1', weight: 2, dashArray: '', fillOpacity: 0.1}, // 交通信息区
+        24: {color: '#00BFFF', weight: 2, dashArray: '', fillOpacity: 0.1}, // 交通信息区
+        25: {color: '#FF6347', weight: 2, dashArray: '', fillOpacity: 0.1}, // 军事训练区
+        26: {color: '#FFD700', weight: 2, dashArray: '', fillOpacity: 0.1}, // 控制区域
+        27: {color: '#00FA9A', weight: 2, dashArray: '', fillOpacity: 0.1}, // ACC 扇区
+        28: {color: '#FF1493', weight: 2, dashArray: '', fillOpacity: 0.1}, // 空中运动或娱乐活动
+        29: {color: '#6495ED', weight: 2, dashArray: '', fillOpacity: 0.1}, // 低空飞越限制
+        30: {color: '#FF69B4', weight: 2, dashArray: '', fillOpacity: 0.3}, // 军事路线
+        31: {color: '#00BFFF', weight: 2, dashArray: '', fillOpacity: 0.1}, // TSA/TRA 供餐路线
+        32: {color: '#FF7F50', weight: 2, dashArray: '', fillOpacity: 0.1}, // VFR 扇区
+        33: {color: '#9ACD32', weight: 2, dashArray: '', fillOpacity: 0.1}  // FIS 扇区
+      };
+
       // 循环遍历数据
       data.forEach(feature => {
-        if (feature.geometry.type === 'Polygon') {
+        if (
+          feature.geometry.type === 'Polygon' &&
+          feature.properties.id !== '65fc178d9c985c1a9d9b0664' &&
+          feature.properties.name !== 'AREA'
+        ) {
+          let featureStyle = typeToStyle[feature.properties.type] || typeToStyle[0]; // 默认为其他类型
+
           // 创建一个GeoJSON层
           const geoJsonLayer = L.geoJSON(feature, {
             style: function (feature) {
               return {
-                color: 'blue',
-                weight: 2,
-                opacity: 1,
-                fillOpacity: 0.5
+                ...featureStyle,
+                weight: featureStyle.weight,
+                opacity: 0.5,
+                color: featureStyle.color,
+                dashArray: featureStyle.dashArray,
+                fillOpacity: featureStyle.fillOpacity
               };
             },
             onEachFeature: function (feature, layer) {
-              layer.bindPopup(feature.properties.id);
+              layer.bindPopup(`<b>ID:</b> ${feature.properties.id}<br><b>Name:</b> ${feature.properties.name}`);
             }
           }).addTo(map);
         }
       });
     })
-    .catch(error => console.error('Error fetching data:', error));
+    .catch(error => console.error('Error fetching data:', error));*/
 
 
-}
+  }
+
+
 
 
 //天气图层
